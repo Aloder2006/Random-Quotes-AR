@@ -31,12 +31,12 @@ readBtn.addEventListener("click", () => {
   utterance.lang = 'ar';
   utterance.text = `${quoteContent.innerText}`;
   readBtn.innerHTML = `<i class="fa-solid fa-microphone-lines"></i>`;
-  readBtn.style.background = "#717ADA";
+  readBtn.style.background = "#828282";
   readBtn.style.color = "#eee";
   utterance.addEventListener("end", () => {
     readBtn.innerHTML = `<i class="fa-solid fa-microphone"></i>`;
     readBtn.style.background = "#eee";
-    readBtn.style.color = "#717ADA";
+    readBtn.style.color = "#828282";
   });
   window.speechSynthesis.speak(utterance);
 });
@@ -45,11 +45,11 @@ readBtn.addEventListener("click", () => {
 copyBtn.addEventListener("click", () => {
   navigator.clipboard.writeText(quoteContent.innerText);
   copyBtn.innerHTML = `<i class="fa-solid fa-check"></i>`
-  copyBtn.style.background = "#717ADA";
+  copyBtn.style.background = "#828282";
   copyBtn.style.color = "#eee";
   setTimeout(() => {
     copyBtn.style.background = "#eee";
-    copyBtn.style.color = "#717ADA";
+    copyBtn.style.color = "#828282";
     copyBtn.innerHTML = `<i class="fa-solid fa-copy"></i>`;
   }, 800);
 });
