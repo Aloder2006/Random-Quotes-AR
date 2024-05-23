@@ -13,10 +13,10 @@ let
 function quoteG() {
   quoteBtn.classList.add("loading");
   quoteBtn.innerText = "تحميل...";
-  var r = Math.floor(Math.random() * 100);
-  fetch(`https://datasets-server.huggingface.co/rows?dataset=HeshamHaroon%2Farabic-quotes&config=default&split=train&offset=${r}&length=100`).then(res => res.json()).then(result => {
-    quoteContent.innerText = result.rows[r].row.quote;
-    quoteAuthor.innerText = `- ${result.rows[r].row.author}`;
+  var r = Math.floor(Math.random()* 3777);
+  fetch(`https://datasets-server.huggingface.co/rows?dataset=HeshamHaroon%2Farabic-quotes&config=default&split=train&offset=${r}&length=1`).then(res => res.json()).then(result => {
+    quoteContent.innerText = result.rows[0].row.quote;
+    quoteAuthor.innerText = `- ${result.rows[0].row.author}`;
     quoteBtn.classList.remove("loading");
     quoteBtn.innerText = "إقتباس جديد";
   })
