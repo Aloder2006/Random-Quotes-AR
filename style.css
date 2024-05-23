@@ -107,3 +107,11 @@ background-color: rgba(130, 130, 130, .7);
   background-color: var(--themeColor);
   color: #eee;
 }
+
+@media only screen and (max-width: 550px){
+  
+  .content{
+    width: 90%;
+  }
+
+}
