@@ -26,15 +26,17 @@ font-family: "Tajawal", sans-serif;
   background-color: black;
   background-image: url("https://picsum.photos/1200/600?grayscale&blur=2");
 }
+
 .content{
   width: 500px;
   background-color: #eee;
-  border-radius: 7px;
+  border-radius: 15px;
   padding: 30px;
+  padding-bottom: 15px;
 }
 .quote-content{
   border: .8px solid #888;
-  border-radius: 7px;
+  border-radius: 15px;
   height: 200px;
   display: flex;
   text-align: center;
@@ -65,12 +67,13 @@ font-family: "Tajawal", sans-serif;
   background-color: var(--themeColor);
   padding: 13px;
   font-size: 15px;
-  border-radius: 6px;
+  border-radius: 15px;
   color: #eee;
   font-weight: 600;
   width: 100%;
   border: none;
   transition: .4s;
+  cursor: pointer;
 }
 
 
@@ -95,7 +98,7 @@ background-color: rgba(130, 130, 130, .7);
   margin: 0 4px;
   border: .8px var(--themeColor) solid;
   color: var(--themeColor);
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 17px;
   transition: .4s;
 }
@@ -106,12 +109,43 @@ background-color: rgba(130, 130, 130, .7);
 .twitter:hover{
   background-color: var(--themeColor);
   color: #eee;
+  cursor: pointer;
+}
+
+.insta{
+  width: 100%;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.insta a{
+  color: var(--themeColor);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 550px){
-  
+
   .content{
     width: 90%;
+  }
+
+}
+
+@media only screen and (max-width: 650px)
+{
+ main{
+  background-image: url("https://picsum.photos/600/1200.jpg?blur=2&grayscale");
+ }
+
+}
+
+@media only screen and (max-width: 1250px){
+  .main{
+    height: auto;
+    padding: 4rem 0;
+    background-image: url("https://picsum.photos/1200/1200.jpg?blur=2&grayscale");
   }
 
 }
